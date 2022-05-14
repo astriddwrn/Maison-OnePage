@@ -1,0 +1,118 @@
+@media only screen and (max-width: 600px){
+    .logo{
+        font-size: 1.5em;
+    }
+    
+    .hero-section{
+        background-position: 40% 40%;
+    }
+    .hero-section .title{
+        font-size: 1.5em;
+    }
+    .hero-section .button{
+        padding: 5px 20px;
+    }
+
+    .about-section .container{
+        width: 80vw;
+    }
+    .about-section .title{
+        font-size: 1.5em;
+    }
+    .about-section .owner-name{
+        font-size: 2em;
+    }
+
+    .product-section .big1, .product-section .big2{
+        display: none;
+    }
+
+    .product-section{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 60vh);
+        grid-template-areas: 
+        "small1"
+        "cont1"
+        "small2"
+        "cont2"
+        "small3"
+        "cont3";
+    }
+
+    .footer-section{
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 10vh 20vw;
+        padding: 15vh 10vw;
+    }
+    
+}
+
+@media only screen and (max-width: 960px){
+    nav{
+        padding: 1em;
+    }
+    nav .menu{
+        flex-direction: column-reverse;
+    }
+    nav .menu-icon{
+        width: fit-content;
+        margin: 0 auto;
+    }
+    nav .menu #menu-list{
+        position: absolute;
+        height: 100vh;
+        top: 99%;
+        right: 0;
+        flex-direction: column;
+        background-color: var(--white);
+        width: 150px;
+        /* align-items: none; */
+    }
+    nav .menu ul li{
+        margin: 0;
+        padding: 15px 10px;
+        text-align: right;
+        width: 100%;
+    }
+
+    .hero-section .container{
+        width: 70%;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        text-align: center;
+    }
+    .hero-section .button{
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 1100px) and (min-width: 601px){
+
+    .footer-section{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, fit-content);
+        grid-gap: 10vh 20vw;
+    }
+    
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 601px){
+
+    .product-section{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 60vh);
+        grid-template-areas: 
+        "big1 big1"
+        "cont1 small1"
+        "small2 cont2"
+        "big2 big2"
+        "small3 cont3";
+    }
+    .product-section .big1 img{
+        transform: translate(0 , -60%);
+    }
+
+}
